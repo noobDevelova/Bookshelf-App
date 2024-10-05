@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary: #222831;
+  --secondary: #31363f;
+  --header-bg: #76abae;
+  --danger-bg: #a02334;
+  --warning-bg: #ffc700;
+  --text-color: #eeeeee;
+  --poppins: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--primary);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1350px;
+  width: 100vw;
+  margin-inline: auto;
+}
+
+.text-span {
+  color: #a76edb;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+}
+
+.header-container {
+  padding-block: 1.5rem;
+  border-bottom: 2px solid #a76edb;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid var(--secondary);
+  padding-block: 1.2rem;
+}
+
+.section-container:last-child {
+  border: none;
+}
+
+.section-heading {
+  font-family: var(--poppins);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-color);
+  flex-basis: 30%;
+}
+
+.header-container > h1 {
+  font-family: var(--poppins);
+  color: var(--text-color);
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex-basis: 50%;
+}
+
+.btn-primary {
+  background-color: var(--secondary);
+}
+
+.btn-secondary {
+  background-color: #a76edb;
+}
+
+.btn-danger {
+  background-color: var(--danger-bg);
+}
+
+.btn-warning {
+  background-color: var(--warning-bg);
+}
+
+.form-container .input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-container label {
+  font-family: var(--poppins);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.form-container input {
+  border: none;
+  padding: 7px 4px;
+  border-radius: 4px;
+  background-color: var(--primary);
+  border: 1px solid #575757;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.form-container input:focus {
+  outline: none;
+  border: 2px solid #a76edb;
+}
+
+.form-container .checkbox {
+  align-self: flex-start;
+}
+
+.form-container .checkbox input {
+  margin-right: 0.5rem;
+  width: 20px;
+  height: 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.75rem;
+  display: inline-block;
+  position: relative;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.form-container .checkbox input:checked + .custom-checkbox {
+  background-color: #6200ea;
+  border-color: #6200ea;
+}
+
+.form-container .checkbox input:checked + .custom-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.form-container .btn {
+  padding-block: 5px;
+  border: none;
+  font-family: var(--poppins);
+  font-size: 1rem;
+  border-radius: 4px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.card {
+  background-color: var(--secondary);
+  padding: 1rem;
+  border-left: 2px solid #a76edb;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  max-width: 300px;
+}
+
+.card .card-header {
+  font-family: var(--poppins);
+  color: var(--text-color);
+  font-weight: 600;
+  font-style: 1.2rem;
+}
+
+.card .card-sub-header {
+  font-family: var(--poppins);
+  color: var(--text-color);
+  font-style: 1rem;
+}
+
+.card-actions-wrapper {
+  margin-top: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.card-actions-wrapper .btn {
+  border: none;
+  font-family: var(--poppins);
+  font-weight: 400;
+  color: #fff;
+}

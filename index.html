@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookshelf App</title>
+
+  <!-- Impor script kamu di sini -->
+  <!-- Lampirkan `defer` jika pemanggilan dilakukan dalam <head> -->
+  <script defer src="./src/js/main.js"></script>
+
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+  <header class="container header-container">
+    <h1>Bookshelf <span class="text-span">App</span></h1>
+  </header>
+
+  <main class="container main-container">
+    <section class="section-container">
+      <h2 class="section-heading" id="form-heading">Tambah Buku Baru</h2>
+      <form id="bookForm" data-testid="bookForm" class="form-container section-body">
+        <div class="input-container">
+          <label for="bookFormTitle">Judul</label>
+          <input id="bookFormTitle" type="text" required data-testid="bookFormTitleInput" />
+        </div>
+        <div class="input-container">
+          <label for="bookFormAuthor">Penulis</label>
+          <input id="bookFormAuthor" type="text" required data-testid="bookFormAuthorInput" />
+        </div>
+        <div class="input-container">
+          <label for="bookFormYear">Tahun</label>
+          <input id="bookFormYear" type="number" required data-testid="bookFormYearInput" />
+        </div>
+        <div class="input-container checkbox">
+          <label for="bookFormIsComplete">Selesai dibaca</label>
+          <span class="custom-checkbox"></span>
+          <input id="bookFormIsComplete" type="checkbox" data-testid="bookFormIsCompleteCheckbox" />
+        </div>
+        <button id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton" class="btn btn-primary">
+          Masukkan Buku ke rak
+        </button>
+      </form>
+    </section>
+
+    <section class="section-container">
+      <h2 class="section-heading">Cari Buku</h2>
+      <form id="searchBook" data-testid="searchBookForm" class="form-container section-body">
+        <label for="searchBookTitle">Judul</label>
+        <input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" />
+        <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton" class="btn btn-primary">
+          Cari
+        </button>
+      </form>
+
+    </section>
+
+    <section class="section-container">
+      <h2 class="section-heading">Belum selesai dibaca</h2>
+
+      <div id="incompleteBookList" data-testid="incompleteBookList" class="card-container">
+        <!-- 
+            Ini adalah struktur HTML untuk masing-masing buku.
+            Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
+          -->
+
+      </div>
+    </section>
+
+    <section class="section-container">
+      <h2 class="section-heading">Selesai dibaca</h2>
+
+      <div id="completeBookList" data-testid="completeBookList" class="card-container">
+        <!-- 
+            Ini adalah struktur HTML untuk masing-masing buku.
+            Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
+          -->
+
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
